@@ -1,3 +1,4 @@
+
 lazy val commonSettings = Seq(
   organization := "ru.job4j",
   version := "0.0.1-SNAPSHOT",
@@ -6,10 +7,11 @@ lazy val commonSettings = Seq(
 
 libraryDependencies += "org.scalatest" % "scalatest_2.12" % "3.0.4" % "test"
 
-lazy val chapter_001 = (project in file("chapter_001")).
-  settings(commonSettings: _*)
+lazy val chapter_001 = (project in file("chapter_001"))
   .settings(
-    libraryDependencies += "org.scalatest" % "scalatest_2.12" % "3.0.4" % "test"
+    commonSettings: _*
+  ).settings(
+  libraryDependencies += "org.scalatest" % "scalatest_2.12" % "3.0.4" % "test"
   ).settings(
     name := "chapter_001",
     moduleName := "chapter_001"
