@@ -1,0 +1,15 @@
+language: scala
+scala:
+  - 2.12.1
+
+sudo: false
+
+after_success:
+  - bash <(curl -s https://codecov.io/bash)
+
+notifications:
+   email:
+    recipients:
+       - parsentev@yandex.ru
+    on_success: never # default: change
+    on_failure: always # default: always
