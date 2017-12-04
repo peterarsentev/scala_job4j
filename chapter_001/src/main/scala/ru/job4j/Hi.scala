@@ -1,5 +1,6 @@
 package ru.job4j
 
+import ru.job4j.condition.Point;
 /**
   * //TODO add comments.
   *
